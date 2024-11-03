@@ -1,0 +1,132 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  become: no
+  vars:
+      # brew list
+      homebrew_packages:
+          - { name: ansible }
+          - { name: curl }
+          - { name: ffmpeg }
+          - { name: git }
+          - { name: go }
+          - { name: hping }
+          - { name: ioping }
+          - { name: ipcalc }
+          - { name: iperf }
+          - { name: jq }
+          - { name: mas }
+          - { name: mysql }
+          - { name: openssl }
+          - { name: telnet }
+          - { name: tree }
+          - { name: unar }
+          - { name: wget }
+          - { name: zsh-autosuggestions }
+          - { name: zsh-completions }
+      homebrew_cask_packages:
+          - { name: alfred }
+          - { name: cleanmymac }
+          - { name: clipy }
+          - { name: discord }
+          - { name: dropbox }
+          - { name: firefox }
+          - { name: google-chrome }
+          - { name: google-drive }
+          - { name: google-japanese-ime }
+          - { name: handbrake }
+          - { name: iterm2 }
+          - { name: microsoft-edge }
+          - { name: obsidian }
+          - { name: postman }
+          - { name: sequel-ace }
+          - { name: snip }
+          - { name: spotify }
+          - { name: visual-studio-code }
+          - { name: wireshark }
+          - { name: zoom }
+      # mas list
+      mac_app_store_apps:
+          - { id: 497799835 } # Xcode
+          - { id: 430255202 } #Mactracker
+          - { id: 1604183938 } #Simple Metronome
+          - { id: 412754595 } #SoundCloud
+          - { id: 1122008420 } #Table Tool
+          - { id: 421131143 } #MPlayerX
+          - { id: 1153157709 } #Speedtest
+          - { id: 634148309 } #Logic Pro
+          - { id: 472226235 } #LanScan
+          - { id: 582840059 } #Wireless Signal
+          - { id: 844918735 } #PicGIF Lite
+          - { id: 425264550 } #Disk Speed Test
+          - { id: 430207028 } #ClamXav
+          - { id: 909760813 } #Who's On My WiFi
+          - { id: 1423210932 } #Flow
+          - { id: 405580712 } #StuffIt Expander
+          - { id: 441258766 } #Magnet
+          - { id: 425424353 } #The Unarchiver
+          - { id: 568494494 } #Pocket
+          - { id: 1295203466 } #Microsoft Remote Desktop
+          - { id: 914182966 } #QuickNome
+          - { id: 420874236 } #PDFOutliner
+          - { id: 409201541 } #Pages
+          - { id: 512505421 } #Snip
+          - { id: 803453959 } #Slack
+          - { id: 1036029895 } #Music Convert-Audio Converter
+          - { id: 642142422 } #Premium Fonts
+          - { id: 411246225 } #Caffeine
+          - { id: 405399194 } #Kindle Classic
+          - { id: 1024640650 } #CotEditor
+          - { id: 408981434 } #iMovie
+          - { id: 409203825 } #Numbers
+          - { id: 539883307 } #LINE
+          - { id: 921923693 } #LibreOffice Vanilla
+          - { id: 409183694 } #Keynote
+          - { id: 1030400150 } #Kortext
+          - { id: 1560727432 } #Microsoft Bing for Safari
+          - { id: 1518036000 } #Sequel Ace
+  tasks:
+      # brew update
+      - name: update homebrew
+        community.general.homebrew:
+            update_homebrew: yes
+
+      # brew
+      - name: brew install
+        community.general.homebrew:
+            name: "{{ item.name }}"
+            state: present
+        with_items: "{{ homebrew_packages }}"
+
+      # cask
+      - name: install homebrew cask packages
+        community.general.homebrew_cask:
+            name: "{{ item.name }}"
+            state: present
+            install_options: "appdir=/Applications"
+        with_items: "{{ homebrew_cask_packages }}"
+
+      # mac app store
+      - name: install mac app store apps
+        community.general.mas:
+            id: "{{ item.id }}"
+            state: present
+        with_items: "{{ mac_app_store_apps }}"
+
+      # # pulsar packages
+      # - name: pulsar packages install
+      #   command: ppm install --packages-file pulsar_packages.txt --verbose
+
+      # # dotfiles
+      # - name: Pull dotfiles
+      #   git: repo=git@github.com:foo/dotfiles.git dest=/path.to/tmp/dotfiles
+      #   register: pull_dotfiles_result
+      #
+      # - name: Copy dotfiles
+      #   copy: src=/path.to/tmp/dotfiles/{{ item }} dest=~/{{ item }} force=no
+      #   with_items:
+      #     - '.bashrc'
+      #     - '.vimrc'
+      #     - '.gitconfig'
+      #   when: pull_dotfiles_result | changed
