@@ -86,6 +86,263 @@
           - { id: 1030400150 } #Kortext
           - { id: 1560727432 } #Microsoft Bing for Safari
           - { id: 1518036000 } #Sequel Ace
+      # defaults read
+      osx_settings:
+          #################################
+          # Finder
+          #################################
+          # show all extensions
+          - {
+                domain: NSGlobalDomain,
+                key: AppleShowAllExtensions,
+                type: bool,
+                value: true,
+            }
+          # Show Status bar in Finder (need "killall Finder")
+          - {
+                domain: com.apple.finder,
+                key: ShowStatusBar,
+                type: bool,
+                value: true,
+            }
+          # Show Path bar in Finder
+          - {
+                domain: com.apple.finder,
+                key: ShowPathbar,
+                type: bool,
+                value: true,
+            }
+          # Show Tab bar in Finder
+          - {
+                domain: com.apple.finder,
+                key: ShowTabView,
+                type: bool,
+                value: true,
+            }
+          # Show the hidden files
+          - {
+                domain: com.apple.finder,
+                key: AppleShowAllFiles,
+                type: string,
+                value: "YES",
+            }
+          #################################
+          # Dock
+          #################################
+          # Wipe all (default) app icons from the Dock
+          #defaults write com.apple.dock persistent-apps -array
+          - {
+                domain: com.apple.dock,
+                key: persistent-apps,
+                type: array,
+                value: [],
+            }
+          # auto hide dock (need "killall Dock")
+          - { domain: com.apple.dock, key: autohide, type: bool, value: true }
+          - {
+                domain: com.apple.dock,
+                key: autohide-time-modifier,
+                type: int,
+                value: 0,
+            }
+          # Move dock to left side
+          - {
+                domain: com.apple.dock,
+                key: orientation,
+                type: string,
+                value: "left",
+            }
+          # Magnificate the dock
+          - {
+                domain: com.apple.dock,
+                key: magnification,
+                type: bool,
+                value: true,
+            }
+          # Set the icon size
+          # Magnificate the dock
+          - { domain: com.apple.dock, key: tilesize, type: float, value: 25 }
+          #################################
+          # QuickLook
+          #################################
+          # Enable text selection in QuickLook
+          - {
+                domain: com.apple.finder,
+                key: QLEnableTextSelection,
+                type: bool,
+                value: true,
+            }
+          #################################
+          # Mission Control
+          #################################
+          # Hot corners
+          # Possible values:
+          #  0: no-op
+          #  2: Mission Control
+          #  3: Show application windows
+          #  4: Desktop
+          #  5: Start screen saver
+          #  6: Disable screen saver
+          #  7: Dashboard
+          # 10: Put display to sleep
+          # 11: Launchpad
+          # 12: Notification Center
+          # 13: Lock Screen
+          # Top left screen corner → Put display to sleep
+          - {
+                domain: com.apple.dock,
+                key: wvous-tl-corner,
+                type: int,
+                value: 10,
+            }
+          - {
+                domain: com.apple.dock,
+                key: wvous-tl-modifier,
+                type: int,
+                value: 0,
+            }
+          # Top right screen corner → Desktop
+          - {
+                domain: com.apple.dock,
+                key: wvous-tr-corner,
+                type: int,
+                value: 4,
+            }
+          - {
+                domain: com.apple.dock,
+                key: wvous-tr-modifier,
+                type: int,
+                value: 0,
+            }
+          # Bottom left screen corner → Mission Control
+          - {
+                domain: com.apple.dock,
+                key: wvous-bl-corner,
+                type: int,
+                value: 2,
+            }
+          - {
+                domain: com.apple.dock,
+                key: wvous-bl-modifier,
+                type: int,
+                value: 0,
+            }
+          # Bottom right screen corner → Show application windows
+          - {
+                domain: com.apple.dock,
+                key: wvous-br-corner,
+                type: int,
+                value: 3,
+            }
+          - {
+                domain: com.apple.dock,
+                key: wvous-br-modifier,
+                type: int,
+                value: 0,
+            }
+          #################################
+          # Keyboard
+          #################################
+          # key repeat fast
+          - { domain: NSGlobalDomain, key: KeyRepeat, type: int, value: 1 }
+          # key delay
+          - {
+                domain: NSGlobalDomain,
+                key: InitialKeyRepeat,
+                type: int,
+                value: 10,
+            }
+          #################################
+          # Trackpad
+          #################################
+          # Enable 'Tap to click'
+          - {
+                domain: com.apple.AppleMultitouchTrackpad,
+                key: Clicking,
+                type: int,
+                value: 1,
+            }
+          # trackpad first click threshold
+          - {
+                domain: com.apple.AppleMultitouchTrackpad,
+                key: FirstClickThreshold,
+                type: int,
+                value: 0,
+            }
+          # trackpad second click threshold
+          - {
+                domain: com.apple.AppleMultitouchTrackpad,
+                key: SecondClickThreshold,
+                type: int,
+                value: 0,
+            }
+          # swipe between apps with four fingers
+          - {
+                domain: com.apple.AppleMultitouchTrackpad,
+                key: TrackpadFourFingerHorizSwipeGesture,
+                type: int,
+                value: 1,
+            }
+          #################################
+          # Safari
+          #################################
+          # Enable the Develop menu and the Web Inspector in Safari
+          - {
+                domain: com.apple.Safari,
+                key: com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled,
+                type: bool,
+                value: true,
+            }
+          - {
+                domain: com.apple.Safari,
+                key: IncludeDevelopMenu,
+                type: bool,
+                value: true,
+            }
+          - {
+                domain: com.apple.Safari,
+                key: WebKitDeveloperExtrasEnabledPreferenceKey,
+                type: bool,
+                value: true,
+            }
+          # Enable `Debug` menu
+          - {
+                domain: com.apple.Safari,
+                key: IncludeInternalDebugMenu,
+                type: bool,
+                value: true,
+            }
+          # Show the full URL in the address bar
+          - {
+                domain: com.apple.Safari,
+                key: ShowFullURLInSmartSearchField,
+                type: bool,
+                value: true,
+            }
+          # Add a context menu item for showing the `Web Inspector` in web views
+          - {
+                domain: NSGlobalDomain,
+                key: WebKitDeveloperExtras,
+                type: bool,
+                value: true,
+            }
+          # Show Safari's Status Bar
+          - {
+                domain: com.apple.Safari,
+                key: ShowStatusBar,
+                type: bool,
+                value: true,
+            }
+          #################################
+          # Other
+          #################################
+          # Show the battery percentage from the menu bar (need "killall SystemUIServer")
+          - {
+                domain: com.apple.menuextra.battery,
+                key: ShowPercent,
+                type: string,
+                value: "YES",
+            }
   tasks:
       # brew update
       - name: update homebrew
@@ -114,9 +371,15 @@
             state: present
         with_items: "{{ mac_app_store_apps }}"
 
-      # # pulsar packages
-      # - name: pulsar packages install
-      #   command: ppm install --packages-file pulsar_packages.txt --verbose
+      # mac settings
+      - name: setup detault mac settings
+        osx_defaults: >
+            domain={{ item.domain }}
+            key={{ item.key }}
+            type={{ item.type }}
+            value={{ item.value }}
+            state={{ item.state|default('present') }}
+        with_items: "{{ osx_settings }}"
 
       # # dotfiles
       # - name: Pull dotfiles
