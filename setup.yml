@@ -89,6 +89,16 @@
       # defaults read
       osx_settings:
           #################################
+          # General
+          #################################
+          # InterfaceStyle
+          - {
+                domain: NSGlobalDomain,
+                key: AppleInterfaceStyle,
+                type: string,
+                value: "Dark",
+            }
+          #################################
           # Finder
           #################################
           # show all extensions
@@ -282,6 +292,26 @@
                 key: TrackpadFourFingerHorizSwipeGesture,
                 type: int,
                 value: 1,
+            }
+          # enable three finger drag
+          - {
+                domain: com.apple.AppleMultitouchTrackpad,
+                key: TrackpadThreeFingerDrag,
+                type: int,
+                value: 1,
+            }
+          - {
+                domain: com.apple.driver.AppleBluetoothMultitouch.trackpad,
+                key: TrackpadThreeFingerDrag,
+                type: int,
+                value: 1,
+            }
+          # tracking speed
+          - {
+                domain: com.apple.NSGlobalDomain,
+                key: com.apple.trackpad.scaling,
+                type: float,
+                value: 3,
             }
           #################################
           # Safari
