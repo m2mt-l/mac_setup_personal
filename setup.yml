@@ -411,15 +411,14 @@
             state={{ item.state|default('present') }}
         with_items: "{{ osx_settings }}"
 
-      # # dotfiles
-      # - name: Pull dotfiles
-      #   git: repo=git@github.com:foo/dotfiles.git dest=/path.to/tmp/dotfiles
-      #   register: pull_dotfiles_result
-      #
+      # dotfiles
+      - name: Pull dotfiles
+        git: repo=git@github.com:m2mt-l/dotfiles.git dest=~/dotfiles
+        register: pull_dotfiles_result
       # - name: Copy dotfiles
-      #   copy: src=/path.to/tmp/dotfiles/{{ item }} dest=~/{{ item }} force=no
+      #   copy: src=~/dotfiles/{{ item }} dest=~/{{ item }} force=no
       #   with_items:
-      #     - '.bashrc'
-      #     - '.vimrc'
-      #     - '.gitconfig'
+      #       - ".bashrc"
+      #       - ".vimrc"
+      #       - ".gitconfig"
       #   when: pull_dotfiles_result | changed
