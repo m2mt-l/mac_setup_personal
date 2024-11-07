@@ -422,3 +422,9 @@
       #       - ".vimrc"
       #       - ".gitconfig"
       #   when: pull_dotfiles_result | changed
+
+      # Show the ~/Library directory
+      - name: show library directory
+        command:
+            cmd: chflags nohidden ~/Library
+        check_mode: no
