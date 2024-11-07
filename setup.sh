@@ -37,6 +37,17 @@ else
     brew install ansible
 fi
 
+##########
+# Oh My ZSH
+##########
+echo -e "-----\nCheck Oh My ZSH"
+if [ -f ~/.oh-my-zsh ]; then
+    echo -e "✅ Oh My ZSH already exist"
+else
+    echo -e "🙅 Oh My ZSH was not exist\nInstall Oh My ZSH"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
 echo -e "-----\nAnsible Deploy"
 cd ~
 curl -O -sfSL https://raw.githubusercontent.com/m2mt-l/mac_setup_personal/refs/heads/master/setup.yml
