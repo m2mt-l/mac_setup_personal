@@ -187,6 +187,20 @@
           #################################
           # Mission Control
           #################################
+          # Enable App Expose Gesture
+          - {
+                domain: com.apple.dock,
+                key: showAppExposeGestureEnabled,
+                type: int,
+                value: 1,
+            }
+          # Enable Mission Control Gesture
+          - {
+                domain: com.apple.dock,
+                key: showMissionControlGestureEnabled,
+                type: int,
+                value: 1,
+            }
           # Hot corners
           # Possible values:
           #  0: no-op
