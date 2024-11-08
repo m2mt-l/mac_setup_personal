@@ -375,6 +375,20 @@
                 type: string,
                 value: "YES",
             }
+          # Avoid creating .DS_Store files on network or USB volumes
+          - {
+                domain: com.apple.desktopservices,
+                key: DSDontWriteNetworkStores,
+                type: bool,
+                value: true,
+            }
+          - {
+                domain: com.apple.desktopservices,
+                key: DSDontWriteUSBStores,
+                type: bool,
+                value: true,
+            }
+
   tasks:
       # brew update
       - name: update homebrew
