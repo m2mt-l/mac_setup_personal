@@ -7,6 +7,7 @@
       # brew list
       homebrew_packages:
           - { name: ansible }
+          - { name: bitwarden-cli }
           - { name: curl }
           - { name: ffmpeg }
           - { name: git }
@@ -49,43 +50,44 @@
       # mas list
       mac_app_store_apps:
           - { id: 497799835 } # Xcode
-          - { id: 430255202 } #Mactracker
-          - { id: 1604183938 } #Simple Metronome
-          - { id: 412754595 } #SoundCloud
-          - { id: 1122008420 } #Table Tool
-          - { id: 421131143 } #MPlayerX
-          - { id: 1153157709 } #Speedtest
-          - { id: 634148309 } #Logic Pro
-          - { id: 472226235 } #LanScan
-          - { id: 582840059 } #Wireless Signal
-          - { id: 844918735 } #PicGIF Lite
-          - { id: 425264550 } #Disk Speed Test
-          - { id: 430207028 } #ClamXav
-          - { id: 909760813 } #Who's On My WiFi
-          - { id: 1423210932 } #Flow
-          - { id: 405580712 } #StuffIt Expander
-          - { id: 441258766 } #Magnet
-          - { id: 425424353 } #The Unarchiver
-          - { id: 568494494 } #Pocket
-          - { id: 1295203466 } #Microsoft Remote Desktop
-          - { id: 914182966 } #QuickNome
-          - { id: 420874236 } #PDFOutliner
-          - { id: 409201541 } #Pages
-          - { id: 512505421 } #Snip
-          - { id: 803453959 } #Slack
-          - { id: 1036029895 } #Music Convert-Audio Converter
-          - { id: 642142422 } #Premium Fonts
-          - { id: 411246225 } #Caffeine
-          - { id: 405399194 } #Kindle Classic
-          - { id: 1024640650 } #CotEditor
-          - { id: 408981434 } #iMovie
-          - { id: 409203825 } #Numbers
-          - { id: 539883307 } #LINE
-          - { id: 921923693 } #LibreOffice Vanilla
-          - { id: 409183694 } #Keynote
-          - { id: 1030400150 } #Kortext
-          - { id: 1560727432 } #Microsoft Bing for Safari
-          - { id: 1518036000 } #Sequel Ace
+          - { id: 430255202 } # Mactracker
+          - { id: 1604183938 } # Simple Metronome
+          - { id: 412754595 } # SoundCloud
+          - { id: 1122008420 } # Table Tool
+          - { id: 421131143 } # MPlayerX
+          - { id: 1153157709 } # Speedtest
+          - { id: 634148309 } # Logic Pro
+          - { id: 472226235 } # LanScan
+          - { id: 582840059 } # Wireless Signal
+          - { id: 844918735 } # PicGIF Lite
+          - { id: 425264550 } # Disk Speed Test
+          - { id: 430207028 } # ClamXav
+          - { id: 909760813 } # Who's On My WiFi
+          - { id: 1423210932 } # Flow
+          - { id: 405580712 } # StuffIt Expander
+          - { id: 441258766 } # Magnet
+          - { id: 425424353 } # The Unarchiver
+          - { id: 568494494 } # Pocket
+          - { id: 1352778147 } # Bitwarden
+          - { id: 1295203466 } # Microsoft Remote Desktop
+          - { id: 914182966 } # QuickNome
+          - { id: 420874236 } # PDFOutliner
+          - { id: 409201541 } # Pages
+          - { id: 512505421 } # Snip
+          - { id: 803453959 } # Slack
+          - { id: 1036029895 } # Music Convert-Audio Converter
+          - { id: 642142422 } # Premium Fonts
+          - { id: 411246225 } # Caffeine
+          - { id: 405399194 } # Kindle Classic
+          - { id: 1024640650 } # CotEditor
+          - { id: 408981434 } # iMovie
+          - { id: 409203825 } # Numbers
+          - { id: 539883307 } # LINE
+          - { id: 921923693 } # LibreOffice Vanilla
+          - { id: 409183694 } # Keynote
+          - { id: 1030400150 } # Kortext
+          - { id: 1560727432 } # Microsoft Bing for Safari
+          - { id: 1518036000 } # Sequel Ace
       # defaults read
       osx_settings:
           #################################

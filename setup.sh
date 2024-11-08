@@ -53,7 +53,7 @@ cd ~
 curl -O -sfSL https://raw.githubusercontent.com/m2mt-l/mac_setup_personal/refs/heads/master/setup.yml
 
 if [ -f ~/setup.yml ]; then
-    ansible-playbook setup.yml -i hosts -v
+    ansible-playbook setup.yml -v
     rm setup.yml
 else
     echo -e "🙅 ansible-playbook was not downloaded"
