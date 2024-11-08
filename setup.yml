@@ -383,6 +383,7 @@
 
       # brew
       - name: brew install
+        ignore_errors: yes
         community.general.homebrew:
             name: "{{ item.name }}"
             state: present
@@ -390,6 +391,7 @@
 
       # cask
       - name: install homebrew cask packages
+        ignore_errors: yes
         community.general.homebrew_cask:
             name: "{{ item.name }}"
             state: present
@@ -398,6 +400,7 @@
 
       # mac app store
       - name: install mac app store apps
+        ignore_errors: yes
         community.general.mas:
             id: "{{ item.id }}"
             state: present
@@ -405,6 +408,7 @@
 
       # mac settings
       - name: setup detault mac settings
+        ignore_errors: yes
         osx_defaults: >
             domain={{ item.domain }}
             key={{ item.key }}
