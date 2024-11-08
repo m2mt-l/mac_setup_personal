@@ -310,7 +310,7 @@
             }
           # tracking speed
           - {
-                domain: com.apple.NSGlobalDomain,
+                domain: "Apple Global Domain",
                 key: com.apple.trackpad.scaling,
                 type: float,
                 value: 3,
