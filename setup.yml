@@ -12,7 +12,6 @@
           - { name: ffmpeg }
           - { name: git }
           - { name: go }
-          - { name: hping }
           - { name: ioping }
           - { name: ipcalc }
           - { name: iperf }
@@ -419,7 +418,7 @@
 
       # dotfiles
       - name: Pull dotfiles
-        ignore_errors: yes
+
         git: repo=git@github.com:m2mt-l/dotfiles.git dest=~/dotfiles
         register: pull_dotfiles_result
       # - name: Copy dotfiles
