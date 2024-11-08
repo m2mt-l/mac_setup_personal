@@ -322,6 +322,19 @@
                 type: int,
                 value: 1,
             }
+          # enable four finger vert swipe
+          - {
+                domain: com.apple.AppleMultitouchTrackpad,
+                key: TrackpadFourFingerVertSwipeGesture,
+                type: int,
+                value: 1,
+            }
+          - {
+                domain: com.apple.driver.AppleBluetoothMultitouch.trackpad,
+                key: TrackpadFourFingerVertSwipeGesture,
+                type: int,
+                value: 1,
+            }
           # tracking speed
           - {
                 domain: "Apple Global Domain",
