@@ -441,6 +441,13 @@
                 type: bool,
                 value: true,
             }
+          # Disable live conversion
+          - {
+                domain: com.apple.inputmethod.Kotoeri,
+                key: JIMPrefLiveConversionKey,
+                type: int,
+                value: 0,
+            }
 
   tasks:
       # brew update
