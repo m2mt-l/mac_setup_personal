@@ -402,6 +402,46 @@
                 type: string,
                 value: "YES",
             }
+          # Avoid creating .DS_Store files on network or USB volumes
+          - {
+                domain: com.apple.desktopservices,
+                key: DSDontWriteNetworkStores,
+                type: bool,
+                value: true,
+            }
+          - {
+                domain: com.apple.desktopservices,
+                key: DSDontWriteUSBStores,
+                type: bool,
+                value: true,
+            }
+          # Disable the "Are you sure you want to open this application?" dialog
+          - {
+                domain: com.apple.LaunchServices,
+                key: LSQuarantine,
+                type: bool,
+                value: false,
+            }
+          # Disable disk image verification
+          - {
+                domain: com.apple.frameworks.diskimages,
+                key: skip-verify,
+                type: bool,
+                value: true,
+            }
+          - {
+                domain: com.apple.frameworks.diskimages,
+                key: skip-verify-locked,
+                type: bool,
+                value: true,
+            }
+          - {
+                domain: com.apple.frameworks.diskimages,
+                key: skip-verify-remote,
+                type: bool,
+                value: true,
+            }
+
   tasks:
       # brew update
       - name: update homebrew
