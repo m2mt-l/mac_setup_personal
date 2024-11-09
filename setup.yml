@@ -497,10 +497,9 @@
         with_items: "{{ osx_settings }}"
 
       # dotfiles
-      - name: Pull dotfiles
-
-        git: repo=git@github.com:m2mt-l/dotfiles.git dest=~/dotfiles
-        register: pull_dotfiles_result
+      # - name: Pull dotfiles
+      #   git: repo=git@github.com:m2mt-l/dotfiles.git dest=~/dotfiles
+      #   register: pull_dotfiles_result
       # - name: Copy dotfiles
       #   copy: src=~/dotfiles/{{ item }} dest=~/{{ item }} force=no
       #   with_items:
