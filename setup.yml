@@ -28,7 +28,7 @@
           - { name: zsh-completions }
       homebrew_cask_packages:
           - { name: alfred }
-          - { name: cleanmymac }
+          # - { name: cleanmymac } need to install clean my mac x manually
           - { name: clipy }
           - { name: discord }
           - { name: dropbox }
