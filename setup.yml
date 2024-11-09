@@ -367,39 +367,21 @@
           #################################
           # Safari
           #################################
-          # Enable the Develop menu and the Web Inspector in Safari
+          # Enable the Develop menu in Safari
           - {
-                domain: com.apple.Safari,
-                key: com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled,
-                type: bool,
-                value: true,
+                domain: com.apple.Safari.SandboxBroker,
+                key: ShowDevelopMenu,
+                type: int,
+                value: 1,
             }
-          - {
-                domain: com.apple.Safari,
-                key: IncludeDevelopMenu,
-                type: bool,
-                value: true,
-            }
-          - {
-                domain: com.apple.Safari,
-                key: WebKitDeveloperExtrasEnabledPreferenceKey,
-                type: bool,
-                value: true,
-            }
-          # Enable `Debug` menu
-          - {
-                domain: com.apple.Safari,
-                key: IncludeInternalDebugMenu,
-                type: bool,
-                value: true,
-            }
-          # Show the full URL in the address bar
-          - {
-                domain: com.apple.Safari,
-                key: ShowFullURLInSmartSearchField,
-                type: bool,
-                value: true,
-            }
+          # Can not find full URL any more in 15.1
+          # # Show the full URL in the address bar
+          # - {
+          #       domain: com.apple.Safari,
+          #       key: ShowFullURLInSmartSearchField,
+          #       type: bool,
+          #       value: true,
+          #   }
           # Add a context menu item for showing the `Web Inspector` in web views
           - {
                 domain: NSGlobalDomain,
@@ -407,13 +389,14 @@
                 type: bool,
                 value: true,
             }
-          # Show Safari's Status Bar
-          - {
-                domain: com.apple.Safari,
-                key: ShowStatusBar,
-                type: bool,
-                value: true,
-            }
+          # Can not find Safari's status bar in 15.1
+          # # Show Safari's Status Bar
+          # - {
+          #       domain: com.apple.Safari,
+          #       key: ShowStatusBar,
+          #       type: bool,
+          #       value: true,
+          #   }
           #################################
           # Other
           #################################
