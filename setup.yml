@@ -146,6 +146,19 @@
                 type: string,
                 value: "Nlsv",
             }
+          # calculate all sizes
+          - {
+                domain: ExtendedListViewSettingsV2,
+                key: calculateAllSizes,
+                type: int,
+                value: 1,
+            }
+          - {
+                domain: ListViewSettings,
+                key: calculateAllSizes,
+                type: int,
+                value: 1,
+            }
 
           #################################
           # Dock
