@@ -139,6 +139,14 @@
                 type: string,
                 value: "YES",
             }
+          # change list view
+          - {
+                domain: com.apple.finder,
+                key: FXPreferredViewStyle,
+                type: string,
+                value: "Nlsv",
+            }
+
           #################################
           # Dock
           #################################
