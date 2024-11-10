@@ -28,6 +28,7 @@
           - { name: zsh-completions }
       homebrew_cask_packages:
           - { name: alfred }
+          - { name: caffeine }
           # - { name: cleanmymac } need to install clean my mac x manually
           - { name: clipy }
           - { name: discord }
@@ -79,7 +80,6 @@
           - { id: 803453959 } # Slack
           - { id: 1036029895 } # Music Convert-Audio Converter
           - { id: 642142422 } # Premium Fonts
-          - { id: 411246225 } # Caffeine
           - { id: 405399194 } # Kindle Classic
           - { id: 1024640650 } # CotEditor
           - { id: 408981434 } # iMovie
