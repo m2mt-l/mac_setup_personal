@@ -73,6 +73,7 @@
           - { id: 425424353 } # The Unarchiver
           - { id: 568494494 } # Pocket
           - { id: 1352778147 } # Bitwarden
+          - { id: 1455702185 } # ComicViewer
           - { id: 1295203466 } # Microsoft Remote Desktop
           - { id: 914182966 } # QuickNome
           - { id: 420874236 } # PDFOutliner
