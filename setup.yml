@@ -40,6 +40,7 @@
           - { name: google-japanese-ime }
           - { name: handbrake }
           - { name: iterm2 }
+          - { name: libreoffice }
           - { name: microsoft-edge }
           - { name: obsidian }
           - { name: postman }
@@ -85,7 +86,6 @@
           - { id: 408981434 } # iMovie
           - { id: 409203825 } # Numbers
           - { id: 539883307 } # LINE
-          - { id: 921923693 } # LibreOffice Vanilla
           - { id: 409183694 } # Keynote
           - { id: 1030400150 } # Kortext
           - { id: 1560727432 } # Microsoft Bing for Safari
