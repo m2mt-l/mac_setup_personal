@@ -26,6 +26,7 @@
           - { name: wget }
           - { name: zsh-autosuggestions }
           - { name: zsh-completions }
+          - { name: zsh-syntax-highlighting }
       homebrew_cask_packages:
           - { name: alfred }
           - { name: caffeine }
