@@ -37,7 +37,7 @@
           - { name: dropbox }
           - { name: firefox }
           - { name: geekbench }
-          - { name: git-credential-manager-core }
+          - { name: git-credential-manager }
           - { name: google-chrome }
           - { name: google-drive }
           - { name: google-japanese-ime }
