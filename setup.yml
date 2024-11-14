@@ -11,6 +11,7 @@
           - { name: bitwarden-cli }
           - { name: curl }
           - { name: ffmpeg }
+          - { name: gh }
           - { name: git }
           - { name: go }
           - { name: ioping }
