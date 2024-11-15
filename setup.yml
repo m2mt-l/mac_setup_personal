@@ -298,13 +298,18 @@
           # Keyboard
           #################################
           # key repeat fast
-          - { domain: NSGlobalDomain, key: KeyRepeat, type: int, value: 1 }
+          - {
+                domain: "Apple Global Domain",
+                key: KeyRepeat,
+                type: float,
+                value: 2,
+            }
           # key delay
           - {
-                domain: NSGlobalDomain,
+                domain: "Apple Global Domain",
                 key: InitialKeyRepeat,
-                type: int,
-                value: 10,
+                type: float,
+                value: 15,
             }
           #################################
           # Trackpad
