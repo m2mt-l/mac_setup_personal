@@ -10,6 +10,7 @@
           - { name: ansible-lint }
           - { name: bitwarden-cli }
           - { name: curl }
+          - { name: cloudflared }
           - { name: ffmpeg }
           - { name: gh }
           - { name: git }
