@@ -51,7 +51,6 @@
           - { name: postman }
           - { name: rectangle }
           - { name: sequel-ace }
-          - { name: snip }
           - { name: spotify }
           - { name: visual-studio-code }
           - { name: wireshark }
