@@ -54,6 +54,7 @@
           - { name: steam }
           - { name: spotify }
           - { name: visual-studio-code }
+          - { name: vlc }
           - { name: wireshark }
           - { name: zoom }
       # mas list
