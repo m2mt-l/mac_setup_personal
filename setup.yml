@@ -31,6 +31,7 @@
           - { name: zsh-syntax-highlighting }
       homebrew_cask_packages:
           - { name: alfred }
+          - { name: brave-browser }
           - { name: caffeine }
           - { name: chatgpt }
           # - { name: cleanmymac } need to install clean my mac x manually
