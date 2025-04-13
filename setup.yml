@@ -49,6 +49,7 @@
           - { name: libreoffice }
           - { name: microsoft-edge }
           - { name: obsidian }
+          - { name: openinterminal-lite }
           - { name: postman }
           - { name: rectangle }
           - { name: sequel-ace }
