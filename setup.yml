@@ -39,27 +39,36 @@
           - { name: clipy }
           - { name: discord }
           - { name: dropbox }
+          - { name: fd }
           - { name: firefox }
+          - { name: font-symbols-only-nerd-font }
+          - { name: fzf }
           - { name: geekbench }
           - { name: git-credential-manager }
           - { name: google-chrome }
           - { name: google-drive }
           - { name: google-japanese-ime }
           - { name: handbrake }
+          - { name: imagemagick }
           - { name: iterm2 }
           - { name: libreoffice }
           - { name: microsoft-edge }
           - { name: obsidian }
           - { name: openinterminal-lite }
+          - { name: poppler }
           - { name: postman }
           - { name: rectangle }
+          - { name: ripgrep }
           - { name: sequel-ace }
+          - { name: sevenzip }
           - { name: steam }
           - { name: spotify }
           - { name: visual-studio-code }
           - { name: vlc }
           - { name: wireshark }
+          - { name: yazi }
           - { name: zoom }
+          - { name: zoxide }
       # mas list
       mac_app_store_apps:
           - { id: 497799835 } # Xcode
