@@ -32,6 +32,7 @@
           - { name: zsh-syntax-highlighting }
       homebrew_cask_packages:
           - { name: alfred }
+          - { name: azookey }
           - { name: brave-browser }
           - { name: caffeine }
           - { name: chatgpt }
