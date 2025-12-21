@@ -23,6 +23,7 @@
           - { name: mas }
           - { name: mysql }
           - { name: openssl }
+          - { name: pwgen }
           - { name: telnet }
           - { name: tree }
           - { name: unar }
