@@ -19,6 +19,7 @@
           - { name: ioping }
           - { name: ipcalc }
           - { name: iperf }
+          - { name: iproute2mac }
           - { name: jq }
           - { name: mas }
           - { name: mysql }
