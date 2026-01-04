@@ -60,6 +60,7 @@
           - { name: openinterminal-lite }
           - { name: poppler }
           - { name: postman }
+          - { name: pvetui }
           - { name: rectangle }
           - { name: ripgrep }
           - { name: sequel-ace }
