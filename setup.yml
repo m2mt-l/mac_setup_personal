@@ -29,6 +29,7 @@
           - { name: tree }
           - { name: unar }
           - { name: wget }
+          - { name: xleak }
           - { name: zsh-autosuggestions }
           - { name: zsh-completions }
           - { name: zsh-syntax-highlighting }
