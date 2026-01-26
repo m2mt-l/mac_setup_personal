@@ -41,6 +41,7 @@
           - { name: chatgpt }
           # - { name: cleanmymac } need to install clean my mac x manually
           - { name: clipy }
+          - { name: devtoys }
           - { name: discord }
           - { name: dropbox }
           - { name: fd }
