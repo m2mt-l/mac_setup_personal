@@ -23,6 +23,7 @@
           - { name: jq }
           - { name: mas }
           - { name: mysql }
+          - { name: ollama }
           - { name: openssl }
           - { name: pwgen }
           - { name: telnet }
