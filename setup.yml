@@ -21,6 +21,7 @@
           - { name: iperf }
           - { name: iproute2mac }
           - { name: jq }
+          - { name: libaacs }
           - { name: mas }
           - { name: mysql }
           - { name: neovim }
