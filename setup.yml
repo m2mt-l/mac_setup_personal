@@ -24,6 +24,7 @@
           - { name: libaacs }
           - { name: mas }
           - { name: mysql }
+          - { name: mysql-client }
           - { name: neovim }
           - { name: ollama }
           - { name: openssl }
