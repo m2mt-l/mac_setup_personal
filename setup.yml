@@ -79,6 +79,7 @@
           - { name: yazi }
           - { name: zoom }
           - { name: zoxide }
+          - { name: yubico-authenticator }
       # mas list
       mac_app_store_apps:
           - { id: 497799835 } # Xcode
